@@ -165,6 +165,24 @@ const body = document.querySelector("#letter-body");
 const signoff = document.querySelector("#letter-signoff");
 const closeButton = document.querySelector(".close-letter");
 const bouquet = document.querySelector("#bouquet-surprise");
+const envelopeSection = document.querySelector("#envelopes");
+
+// Create a close button at the bottom of each letter.
+const bottomCloseButton = document.createElement("button");
+
+bottomCloseButton.type = "button";
+bottomCloseButton.className = "button-link letter-bottom-close";
+bottomCloseButton.textContent = "Close this letter";
+
+bottomCloseButton.style.cursor = "pointer";
+bottomCloseButton.style.border = "0";
+
+bottomCloseButton.setAttribute(
+  "aria-label",
+  "Close this letter and return to the envelopes"
+);
+
+signoff.insertAdjacentElement("afterend", bottomCloseButton);
 const openedLetters = new Set();
 let bouquetRevealed = false;
 
@@ -183,8 +201,29 @@ function revealBouquet() {
 
 function closeLetter() {
   panel.hidden = true;
-  cards.forEach(card => card.setAttribute("aria-expanded", "false"));
+
+  cards.forEach(card => {
+    card.setAttribute("aria-expanded", "false");
+  });
+
   revealBouquet();
+
+  // If all letters are read, let the bouquet reveal itself.
+  if (bouquetRevealed && bouquet && !bouquet.hidden) {
+    return;
+  }
+
+  // Otherwise, return to the envelope section.
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  window.setTimeout(() => {
+    envelopeSection.scrollIntoView({
+      behavior: reduceMotion ? "auto" : "smooth",
+      block: "start"
+    });
+  }, 80);
 }
 
 cards.forEach(card => {
@@ -212,6 +251,7 @@ cards.forEach(card => {
 });
 
 closeButton.addEventListener("click", closeLetter);
+bottomCloseButton.addEventListener("click", closeLetter);
 
 document.addEventListener("keydown", event => {
   if (event.key === "Escape" && !panel.hidden) closeLetter();
