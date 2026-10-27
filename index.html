@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4eee4">
+  <title>for shark 🦈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Interactive combination-lock entrance -->
+  <section class="lock-gate" id="lock-gate" aria-labelledby="lock-title" aria-describedby="lock-instructions">
+    <div class="lock-gate-glow" aria-hidden="true"></div>
+    <div class="gate-content">
+      <p class="gate-kicker">UNLOCK MY THOUGHTS</p>
+      <h1 class="gate-title" id="lock-title">What's The Password?!!</h1>
+      <p class="gate-copy" id="lock-instructions">Press the buttons to enter the six-digit combination.</p>
+
+      <div class="physical-lock" id="physical-lock" aria-label="Metal push-button combination padlock">
+        <div class="lock-shackle" aria-hidden="true"><span class="shackle-inner"></span></div>
+        <div class="lock-body">
+          <div class="lock-top-plate" aria-hidden="true"><span class="plate-screw"></span><span class="plate-brand">COMBINATION LOCK</span><span class="plate-screw"></span></div>
+          <div class="lock-display" aria-label="Passcode progress">
+            <div class="digit-slots" id="digit-slots" aria-hidden="true">
+              <span class="digit-slot"></span><span class="digit-slot"></span><span class="digit-slot"></span><span class="digit-slot"></span><span class="digit-slot"></span><span class="digit-slot"></span>
+            </div>
+            <span class="lock-status" id="lock-status" role="status" aria-live="polite">READY</span>
+          </div>
+          <div class="lock-keypad" id="lock-keypad" aria-label="Number keypad">
+            <button class="lock-key" type="button" data-digit="1" aria-label="Number 1">1</button>
+            <button class="lock-key" type="button" data-digit="2" aria-label="Number 2">2</button>
+            <button class="lock-key" type="button" data-digit="3" aria-label="Number 3">3</button>
+            <button class="lock-key" type="button" data-digit="4" aria-label="Number 4">4</button>
+            <button class="lock-key" type="button" data-digit="5" aria-label="Number 5">5</button>
+            <button class="lock-key" type="button" data-digit="6" aria-label="Number 6">6</button>
+            <button class="lock-key" type="button" data-digit="7" aria-label="Number 7">7</button>
+            <button class="lock-key" type="button" data-digit="8" aria-label="Number 8">8</button>
+            <button class="lock-key" type="button" data-digit="9" aria-label="Number 9">9</button>
+            <button class="lock-key utility-key" type="button" data-action="clear" aria-label="Clear code">C</button>
+            <button class="lock-key" type="button" data-digit="0" aria-label="Number 0">0</button>
+            <button class="lock-key utility-key enter-key" type="button" data-action="enter" aria-label="Enter code">↵</button>
+          </div>
+          <div class="lock-bottom-plate" aria-hidden="true"><span></span><span class="bottom-mark">SECURE · 6 DIGITS</span><span></span></div>
+        </div>
+        <div class="lock-shadow" aria-hidden="true"></div>
+      </div>
+      <p class="gate-footnote" id="gate-feedback">Take your time. The lock will open when the combination is right.</p>
+    </div>
+  </section>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Back to top">for shark <span>🦈</span></a>
+    <span class="top-note">-Deybb</span>
+  </header>
+
+  <main id="top">
+    <section class="hero scrapbook-card">
+      <div class="tape tape-left" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">A SMALL CORNER OF THE INTERNET</p>
+        <h1>hi, shark. <span class="hand-heart">♡</span></h1>
+        <p class="intro">I made this little website because there are a few things I wanted to say properly.</p>
+        <p class="soft-note">Take your time. You can leave whenever you want, and you don't owe me a reply.</p>
+        <a class="button-link" href="#envelopes">open the notesss  <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="Space for your shark picture">
+        <div class="sun-doodle" aria-hidden="true">✳</div>
+        <img class="shark-photo" src="shark-picture.png" alt="Cute blue shark sticker">
+        <span class="sparkle sparkle-one" aria-hidden="true">✦</span>
+        <span class="sparkle sparkle-two" aria-hidden="true">✧</span>
+      </div>
+      <div class="tape tape-right" aria-hidden="true"></div>
+    </section>
+
+    <section class="intro-strip" aria-label="A gentle note">
+      <span class="tiny-sticker">✿</span>
+      <p>This isn't meant to change your mind or ask anything from you. I just wanted to be honest and respectful.</p>
+      <span class="tiny-sticker">♡</span>
+    </section>
+
+    <section class="envelope-section" id="envelopes">
+      <div class="section-heading">
+        <p class="eyebrow">THREE LITTLE ENVELOPES</p>
+        <h2>open whichever one you want</h2>
+        <p>Each envelope has things I'd like to say. There's no order and no hidden expectation.</p>
+      </div>
+
+      <div class="envelope-grid">
+        <button class="envelope-card" data-letter="sorry" aria-controls="letter-panel" aria-expanded="false">
+          <span class="envelope" aria-hidden="true"><span class="envelope-flap"></span><span class="envelope-heart">♡</span></span>
+          <span class="envelope-title">first things first</span>
+          <span class="envelope-subtitle">Why I Like You</span>
+          <span class="open-hint">click to open ↗</span>
+        </button>
+        <button class="envelope-card" data-letter="honest" aria-controls="letter-panel" aria-expanded="false">
+          <span class="envelope envelope-blue" aria-hidden="true"><span class="envelope-flap"></span><span class="envelope-heart">✦</span></span>
+          <span class="envelope-title">second things second (charet)</span>
+          <span class="envelope-subtitle">What I want U to know</span>
+          <span class="open-hint">click to open ↗</span>
+        </button>
+        <button class="envelope-card" data-letter="space" aria-controls="letter-panel" aria-expanded="false">
+          <span class="envelope envelope-yellow" aria-hidden="true"><span class="envelope-flap"></span><span class="envelope-heart">☼</span></span>
+          <span class="envelope-title">Finale</span>
+          <span class="envelope-subtitle">Thank You</span>
+          <span class="open-hint">click to open ↗</span>
+        </button>
+      </div>
+
+      <article class="letter-panel" id="letter-panel" hidden aria-live="polite">
+        <div class="letter-topline"><span class="letter-stamp">FOR SHARK ♡</span><button class="close-letter" type="button" aria-label="Close letter">×</button></div>
+        <p class="letter-label" id="letter-label">A NOTE</p>
+        <h3 id="letter-title">A straightforward apology</h3>
+        <div class="letter-body" id="letter-body"></div>
+        <div class="letter-signoff" id="letter-signoff">— Deybb</div>
+      </article>
+
+      <section class="bouquet-surprise" id="bouquet-surprise" hidden aria-live="polite" aria-labelledby="bouquet-title">
+        <div class="bouquet-paper">
+          <p class="eyebrow">ONE LAST LITTLE</p>
+          <h2 id="bouquet-title">I have something for you, sha... ♡</h2>
+          <p class="bouquet-intro">You made it to the end, thank you. These flowers are for you.</p>
+          <div class="bouquet-art" role="img" aria-label="A hand-drawn pastel bouquet of pink and cream flowers tied with a pink ribbon">
+            <span class="petal-fall petal-one" aria-hidden="true">✿</span>
+            <span class="petal-fall petal-two" aria-hidden="true">♡</span>
+            <span class="petal-fall petal-three" aria-hidden="true">✧</span>
+            <img
+            class="bouquet-svg"
+            src="Pastel Tulip and Daisy Bouquet.png"
+            alt="FLOWERSS"/>
+          </div>
+          <p class="bouquet-message">Pink Tulips for you sistahhh...</p>
+          <span class="bouquet-signoff">— Deybb</span>
+        </div>
+      </section>
+    </section>
+
+
+<section class="memory-card scrapbook-card">
+  <span class="corner-star" aria-hidden="true">✦</span>
+  <div class="memory-icon" aria-hidden="true">📎</div>
+  <div>
+    <p class="eyebrow">A LITTLE REMINDER</p>
+    <h2>u don't have to figure everything out right now</h2>
+    <p>I made this not to ask anything from u, but to let u understand what has been in my heart. U don't have to force yourself to feel something, make a decision, or give me an answer just because of this. I just hope u know that my feelings are genuine, and that I want u to be honest with yourself and with me, whatever that means for us.</p>
+  </div>
+  <span class="paper-heart" aria-hidden="true">♡</span>
+</section>
+
+
+    <footer>
+      <p>made by Deybb of course <span aria-hidden="true">♡</span></p>
+      <p class="footer-small">No reply needed. No pressure to stay.</p>
+    </footer>
+  </main>
+
+  <script src="lock.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
